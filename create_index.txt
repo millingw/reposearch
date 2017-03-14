@@ -1,0 +1,20 @@
+db.objects.find( { $text: { $search: "code" } } )
+
+
+db.objects.createIndex(
+   
+	{
+	title: "text",
+        creator: "text",
+        subject: "text",
+        description: "text",
+        date: "text",
+        dc_type: "text",
+        identifier: "text",
+        relation: "text",
+        rights: "text"
+        },
+        {
+         name: "TextIndex"
+	}
+ )
